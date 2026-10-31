@@ -2,41 +2,42 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f6f3eb"><meta name="description" content="PUSHKINS COFFEE — ваш любимый кофе с собой. Выберите напиток и оформите самовывоз в Telegram.">
-  <title>PUSHKINS COFFEE — кофе уже ждёт</title>
+  <meta name="theme-color" content="#ffbb22"><meta name="description" content="Авто-кофейня PUSHKIN’S COFFEE. Кофе классика, раф, чай и street food. Выбирайте и забирайте с собой.">
+  <title>PUSHKIN’S COFFEE — авто-кофейня</title>
   <link rel="icon" href="./assets/mark.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <script type="module" src="./app.js"></script>
 </head>
 <body>
-  <div class="demo-bar" id="demo-bar" hidden>Витрина в деморежиме <span>·</span> Заказы и оплата пока не подключены</div>
+  <div class="demo-bar" id="demo-bar" hidden>ДЕМО <span>·</span> Заказы и онлайн-оплата пока не подключены</div>
   <header class="header wrap">
-    <a class="wordmark" href="./" aria-label="PUSHKINS COFFEE, на главную">PUSHKINS<span>COFFEE & GOOD DAYS</span></a>
-    <div class="header-note">Маленькая пауза.<br>Большое удовольствие.</div>
+    <a class="wordmark" href="./" aria-label="PUSHKINS COFFEE, на главную"><img src="./assets/mark.svg" alt=""><span>PUSHKIN’S <b>COFFEE</b></span></a>
+    <div class="header-note">КОФЕ С СОБОЙ.<br>ХОРОШЕГО ПУТИ!</div>
     <button class="round-button" id="info-button" aria-label="О кофейне"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.3 7-12A7 7 0 0 0 5 9c0 5.7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></button>
   </header>
   <main class="wrap">
     <section class="hero" aria-label="Добро пожаловать">
-      <div class="hero-copy"><div class="eyebrow"><span class="tiny-star">✳</span> ХОРОШИЙ ДЕНЬ НАЧИНАЕТСЯ ЗДЕСЬ</div>
-        <h1>Ваш кофе.<br>В вашем <em>ритме.</em></h1>
-        <p>Выбирайте любимое, заказывайте заранее.<br>А мы приготовим к вашему приходу.</p>
-        <a class="primary hero-button" href="#menu">Выбрать свой кофе <span>↗</span></a>
-        <div class="hero-foot"><span>Свежемолотый. Свежесваренный.</span><span>Всегда ваш.</span></div>
+      <div class="hero-copy"><div class="eyebrow"><span class="tiny-star">✳</span> ТВОЯ ВКУСНАЯ ОСТАНОВКА</div>
+        <h1>Сначала кофе.<br>Потом <span class="underline">всё остальное.</span></h1>
+        <p>Тот самый стаканчик для хорошего дня.<br>Заказывай заранее — забирай по пути!</p>
+        <a class="primary hero-button" href="#menu">Что-нибудь вкусное <span>↗</span></a>
+        <div class="hero-foot"><span>КОФЕ · СЛАДОСТИ · STREET FOOD</span><span>С СОБОЙ ♥</span></div>
       </div>
-      <div class="hero-art"><img class="hero-photo" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=90" alt="Чашка свежего кофе на деревянном столе"><div class="photo-shade"></div><span class="art-caption">PUSHKINS / DAILY COFFEE RITUAL</span><div class="stamp"><span>С СОБОЙ</span><b>♥</b><span>С ЛЮБОВЬЮ</span></div><div class="photo-note">Ещё один повод<br><em>сделать паузу.</em></div></div>
+      <div class="hero-art"><svg class="yellow-blob" viewBox="0 0 560 470" preserveAspectRatio="none" aria-hidden="true"><path d="M22 83C-12 10 90 39 135 22S257 7 291 26 393-7 441 29 554 47 534 103 581 191 535 241 561 333 497 341 431 435 372 444 304 385 247 403 163 451 131 412 93 335 52 337-8 308 23 247 63 187 32 145 22 83Z" fill="#ffbb22" stroke="#171713" stroke-width="4"/></svg><div class="brand-lockup"><span>АВТО-КОФЕЙНЯ</span><b>PUSHKIN’S</b><strong>COFFEE</strong></div><div id="hero-cups" class="hero-cups" aria-label="Объёмы: 250, 350, 450 и 600 мл"></div><span class="hero-sticker">ЛЮБИМЫЙ КОФЕ<br>ВСЕГДА ПО ПУТИ!</span></div>
     </section>
-    <div class="service-strip"><span><b>01</b> Выберите любимое</span><i>→</i><span><b>02</b> Оплатите в Telegram</span><i>→</i><span><b>03</b> Заберите с собой</span></div>
-    <section id="menu" class="menu-section"><div class="section-heading"><div><div class="eyebrow">ВАША ЕЖЕДНЕВНАЯ ПРИВЫЧКА</div><h2>Что вам приготовить?</h2></div><span class="menu-note">Кофе. И кое-что к нему.</span></div>
-      <div class="menu-toolbar"><div class="categories" id="categories" aria-label="Категории меню"></div><label class="search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="Найти в меню" aria-label="Найти в меню"></label></div>
-      <div id="products" class="product-grid"></div><p id="no-results" class="empty" hidden>Пока ничего не нашлось. Попробуйте другое название.</p>
+    <div class="service-strip"><span><b>1.</b> Выбирай любимое</span><i>→</i><span><b>2.</b> Оформляй в Telegram</span><i>→</i><span><b>3.</b> Забирай с собой</span></div>
+    <section id="menu" class="menu-section"><div class="section-heading"><div><div class="eyebrow">ТОТ САМЫЙ ВКУС. ТОТ САМЫЙ PUSHKIN’S.</div><h2>Ну что, <span>по кофе?</span></h2></div><span class="menu-note">Выбирай свой размер<br><b>250 / 350 / 450 / 600 мл</b></span></div>
+      <div class="menu-toolbar"><div class="categories" id="categories" aria-label="Категории меню"></div><label class="search"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input type="search" id="search" placeholder="Что будем искать?" aria-label="Найти в меню"></label></div>
+      <div id="products" class="menu-groups"></div><p id="no-results" class="empty" hidden>Такого пока нет в меню.<br>Попробуй другое название!</p>
     </section>
-    <section class="closing-note"><span>✳</span><p>Не просто кофе.<br><em>Ваша хорошая привычка.</em></p><span class="closing-small">С любовью,<br>PUSHKINS COFFEE</span></section>
+    <section class="extras-note"><div><h2 class="label-heading">ДОПЫ</h2><p>На другом молоке <b>от +40 ₽</b><br>Сироп <b>+60 ₽</b><br>Эспрессо <b>+80 ₽</b></p><span>Добавляй при выборе напитка.</span></div><img id="extras-cup" alt="Рисованный стаканчик кофе"><div class="extras-copy">ТВОЙ КОФЕ.<br><span>ТВОИ ПРАВИЛА.</span><small>Безлактозное, банановое, овсяное,<br>миндальное или кокосовое молоко.</small></div></section>
+    <section class="closing-note"><span>✳</span><p>Заглядывай за кофе.<br><em>Уезжай с настроением!</em></p><span class="closing-small">С ЛЮБОВЬЮ,<br>PUSHKIN’S COFFEE ♥</span></section>
   </main>
-  <footer class="wrap footer"><span>PUSHKINS COFFEE © <span id="year"></span></span><button id="about-button">О кофейне и заказах ↗</button></footer>
+  <footer class="wrap footer"><span>PUSHKIN’S COFFEE © <span id="year"></span></span><button id="about-button">О кофейне и заказах ↗</button></footer>
   <button class="cart-float" id="cart-button" hidden><span class="cart-label"><svg viewBox="0 0 24 24"><path d="M5 7h14l-1 14H6L5 7Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg> Ваш заказ <b id="cart-count">0</b></span><span id="cart-total"></span><span>→</span></button>
   <dialog id="product-dialog" class="product-dialog"><button class="close" data-close aria-label="Закрыть">×</button><div id="product-detail"></div></dialog>
-  <dialog id="cart-dialog" class="cart-dialog"><div class="dialog-header"><div><div class="eyebrow">ПАУЗА УЖЕ БЛИЗКО</div><h2>Ваш заказ</h2></div><button class="close" data-close aria-label="Закрыть">×</button></div><div id="cart-content"></div></dialog>
-  <dialog id="info-dialog" class="info-dialog"><button class="close" data-close aria-label="Закрыть">×</button><div class="eyebrow">РАДЫ ВАМ КАЖДЫЙ ДЕНЬ</div><h2>PUSHKINS<br><em>COFFEE</em></h2><div id="shop-info"></div></dialog>
+  <dialog id="cart-dialog" class="cart-dialog"><div class="dialog-header"><div><div class="eyebrow">ПРИГОТОВИМ С ЛЮБОВЬЮ</div><h2>Ваш заказ</h2></div><button class="close" data-close aria-label="Закрыть">×</button></div><div id="cart-content"></div></dialog>
+  <dialog id="info-dialog" class="info-dialog"><button class="close" data-close aria-label="Закрыть">×</button><div class="eyebrow">ТВОЯ ВКУСНАЯ ОСТАНОВКА</div><h2>PUSHKIN’S<br>COFFEE</h2><div id="shop-info"></div></dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript><p class="empty">Включите JavaScript, чтобы открыть меню и корзину.</p></noscript>
 </body>

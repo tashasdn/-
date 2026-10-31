@@ -1,5 +1,5 @@
 import { createHmac, timingSafeEqual } from 'node:crypto';
-import { resolveLine } from '../docs/catalog.js';
+import { resolveLine, lineKey } from '../docs/catalog.js';
 export class AppError extends Error { constructor(message, status = 400) { super(message); this.status = status; } }
 export function authenticate(initData, botToken, now = Date.now()) {
   if (!initData || initData.length > 12000) throw new AppError('Откройте приложение заново в Telegram.', 401);
@@ -23,8 +23,8 @@ export function priceOrder(input) {
   if (!['soon','30','60'].includes(input.pickup)) throw new AppError('Выберите время самовывоза.');
   if (typeof input.comment !== 'string' || input.comment.length > 300) throw new AppError('Комментарий слишком длинный.');
   let lines;
-  try { lines = input.items.map(l => resolveLine({ productId: l.productId, sizeId: l.sizeId, milkId: l.milkId, quantity: l.quantity })); } catch { throw new AppError('Меню обновилось. Проверьте заказ.'); }
-  const keys = lines.map(l => `${l.productId}:${l.sizeId}:${l.milkId}`);
+  try { lines = input.items.map(l => resolveLine({ productId: l.productId, sizeId: l.sizeId, milkId: l.milkId, syrupId: l.syrupId, extraShot: l.extraShot, quantity: l.quantity })); } catch { throw new AppError('Меню обновилось. Проверьте заказ.'); }
+  const keys = lines.map(lineKey);
   if (new Set(keys).size !== keys.length || lines.reduce((s,l) => s + l.quantity, 0) > 50) throw new AppError('Слишком большой заказ или повторяющиеся позиции.');
   const amount = lines.reduce((s,l) => s + l.quantity * l.unitPrice * 100, 0);
   return { lines, amount, pickup: input.pickup, comment: input.comment.trim() };
