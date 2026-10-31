@@ -1,0 +1,7 @@
+{
+  "name": "pushkins-coffee-mini-app",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": { "test": "node --test backend/core.test.mjs", "start": "node --env-file=backend/.env backend/server.mjs", "setup-bot": "node --env-file=backend/.env scripts/setup-bot.mjs" }
+}
